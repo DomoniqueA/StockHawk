@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "451842918877",
+    "project_id": "stock-hawk-3d71c"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451842918877:android:9808a16399a49d6e",
+        "android_client_info": {
+          "package_name": "com.udacity.stockhawk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "451842918877-q9o57g46k3u6hbce95dj3okleu4it2dr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4AUYY40J2t5cC4fr3DH778W29NiO7XMw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
