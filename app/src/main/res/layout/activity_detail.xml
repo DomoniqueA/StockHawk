@@ -18,14 +18,14 @@
         android:textSize="100sp"
         tools:text="GOOG" />
 
-    <fragment
-        android:id="@id/fragmentGraph"
-        android:name="com.udacity.stockhawk.ui.GraphFragment"
-        class="com.udacity.stockhawk.ui.GraphFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        tools:layout="@layout/fragment_graph"
-        android:layout_weight="0.83" />
+    <!--<fragment-->
+        <!--android:id="@id/fragmentGraph"-->
+        <!--android:name="com.udacity.stockhawk.ui.GraphFragment"-->
+        <!--class="com.udacity.stockhawk.ui.GraphFragment"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--tools:layout="@layout/fragment_graph"-->
+        <!--android:layout_weight="0.83" />-->
     <TextView
         android:id="@+id/company_name"
         style="@style/TextAppearance.AppCompat.Large"

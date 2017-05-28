@@ -52,5 +52,6 @@
     <!--  Widget Strings  -->
     <string name="appwidget_text">Stock Hawk</string>
     <string name="add_widget">Add widget</string>
+    <string name="valid_stock_error">Enter A Valid Stock Key!</string>
 
 </resources>

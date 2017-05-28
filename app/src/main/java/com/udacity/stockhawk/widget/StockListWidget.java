@@ -1,13 +1,11 @@
 package com.udacity.stockhawk.widget;
 
-import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
-import android.content.Intent;
 import android.widget.RemoteViews;
 
-import com.udacity.stockhawk.ui.MainActivity;
+import com.udacity.stockhawk.R;
 
 /**
  * Implementation of App Widget functionality.
@@ -20,7 +18,7 @@ public class StockListWidget extends AppWidgetProvider {
         CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.stock_list_widget);
-        views.setTextViewText(R.id.appwidget_text, widgetText);
+//        views.setTextViewText(R.id.appwidget_text, widgetText);
 
          // Instruct the widget manager to update the widget
         appWidgetManager.updateAppWidget(appWidgetId, views);

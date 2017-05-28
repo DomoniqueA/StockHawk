@@ -5,8 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebSettings;
-import android.webkit.WebView;
 
 import com.udacity.stockhawk.R;
 
@@ -20,16 +18,16 @@ public class GraphFragment extends Fragment {
         // Graph Fragment Inflater
         View view = inflater.inflate(R.layout.fragment_graph, container, false);
 
-        WebView graphWebView = (WebView) view.findViewById(R.id.graphWebView);
+//        WebView graphWebView = (WebView) view.findViewById(R.id.graphWebView);
 // TODO Change goog to retrieve symbol passed to detail.
         String companySymbol = "goog";
         String graphUrl = "http://empyrean-aurora-455.appspot.com/charts.php?symbol=" + companySymbol;
 
-        WebSettings webSettings = graphWebView.getSettings();
+//        WebSettings webSettings = graphWebView.getSettings();
         // Enable JavaScript to show Stock Graph
-        webSettings.setJavaScriptEnabled(true);
+//        webSettings.setJavaScriptEnabled(true);
 
-        graphWebView.loadUrl(graphUrl);
+//        graphWebView.loadUrl(graphUrl);
 
         return view;
     }

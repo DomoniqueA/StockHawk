@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="valid_stock_error">Enter A Valid Stock Key!</string>
+</resources>
