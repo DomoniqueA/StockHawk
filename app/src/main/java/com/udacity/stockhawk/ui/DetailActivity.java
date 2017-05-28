@@ -6,9 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.udacity.stockhawk.R;
+import com.udacity.stockhawk.data.Contract;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
+import static com.udacity.stockhawk.data.Contract.Quote.COLUMN_PRICE;
 
 
 public class DetailActivity extends AppCompatActivity {
@@ -17,14 +20,14 @@ public class DetailActivity extends AppCompatActivity {
      * The columns of data that we are interested in displaying within our DetailActivity's
      * stock detail display.
      */
-//    public static final String[] QUOTE_DETAIL = {
-//            Contract.Quote._ID,
-//            Contract.Quote.COLUMN_SYMBOL,
-//            COLUMN_PRICE,
-//            Contract.Quote.COLUMN_ABSOLUTE_CHANGE,
-//            Contract.Quote.COLUMN_PERCENTAGE_CHANGE,
-//            Contract.Quote.COLUMN_HISTORY
-//    };
+    public static final String[] QUOTE_DETAIL = {
+            Contract.Quote._ID,
+            Contract.Quote.COLUMN_SYMBOL,
+            COLUMN_PRICE,
+            Contract.Quote.COLUMN_ABSOLUTE_CHANGE,
+            Contract.Quote.COLUMN_PERCENTAGE_CHANGE,
+            Contract.Quote.COLUMN_HISTORY
+    };
 
     /*
      * Storing the indices of the values in the array of Strings above to more quickly be able

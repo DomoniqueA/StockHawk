@@ -30,6 +30,8 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import timber.log.Timber;
 
+import static android.R.attr.id;
+
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>,
         SwipeRefreshLayout.OnRefreshListener,
         StockAdapter.StockAdapterOnClickHandler {
@@ -124,7 +126,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     void addStock(String symbol) {
-        if (symbol != null && !symbol.isEmpty()) {
+        if (symbol != null && !symbol.isEmpty() && symbol.length() <5) {
 
             if (networkUp()) {
                 swipeRefreshLayout.setRefreshing(true);

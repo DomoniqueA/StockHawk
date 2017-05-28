@@ -14,6 +14,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.udacity.stockhawk.R;
 
@@ -70,8 +71,7 @@ public class AddStockDialog extends DialogFragment {
         if (parent instanceof MainActivity) {
             ((MainActivity) parent).addStock(stock.getText().toString());
         }
-        dismissAllowingStateLoss();
+        Toast.makeText(parent, "Please Enter A Valid Stock Key", Toast.LENGTH_LONG).show();
     }
-
 
 }
