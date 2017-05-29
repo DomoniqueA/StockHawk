@@ -46,19 +46,20 @@
             android:exported="true"
             android:permission="android.permission.BIND_JOB_SERVICE" />
 
-        <receiver android:name=".widget.StockListWidget">
+        <receiver android:name=".widget.StockListWidgetProvider"
+            android:label="@string/title_widget_stocklist">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="sync.QuoteSyncJob.ACTION_DATA_UPDATED" />
             </intent-filter>
-
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/stock_list_widget_info" />
         </receiver>
 
-        <service
-            android:name=".widget.StocklistWidgetIntentService"
-            android:exported="false"></service>
+        <!--<service-->
+            <!--android:name=".widget.StocklistWidgetIntentService"-->
+            <!--android:exported="false"/>-->
     </application>
 
 </manifest>

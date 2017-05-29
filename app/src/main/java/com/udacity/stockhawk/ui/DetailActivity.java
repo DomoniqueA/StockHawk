@@ -5,12 +5,18 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.LineChart;
 import com.udacity.stockhawk.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.udacity.stockhawk.data.Contract.Quote.*;
+import static com.udacity.stockhawk.data.Contract.Quote.COLUMN_ABSOLUTE_CHANGE;
+import static com.udacity.stockhawk.data.Contract.Quote.COLUMN_HISTORY;
+import static com.udacity.stockhawk.data.Contract.Quote.COLUMN_PERCENTAGE_CHANGE;
+import static com.udacity.stockhawk.data.Contract.Quote.COLUMN_PRICE;
+import static com.udacity.stockhawk.data.Contract.Quote.COLUMN_SYMBOL;
+import static com.udacity.stockhawk.data.Contract.Quote._ID;
 
 
 public class DetailActivity extends AppCompatActivity {
@@ -56,6 +62,8 @@ public class DetailActivity extends AppCompatActivity {
     TextView mPercentChangeView;
     @BindView(R.id.stock_history)
     TextView mHistoryView;
+    @BindView(R.id.stock_chart)
+    LineChart mStockChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,13 +76,17 @@ public class DetailActivity extends AppCompatActivity {
 
         if (mUri == null) throw new NullPointerException("URI for DetailActivity cannot be null");
 
+//        setQuoteDetail(mUri);
     }
-
-    public void setQuoteDetail(Uri uri){
-
-
-
-    }
+    // TODO (3) RETRIEVE STOCK INFO
+//    public void setQuoteDetail(Uri uri){
+//        String stock = getStockFromUri(uri);
+//        mStockView.setText(stock);
+//        LineData historicalRecords;
+//        historicalRecords = MockUtils.getHistory();
+//        mStockChart.getLineData();
+//        mStockChart.setData(historicalRecords);
+//    }
 
 
 }

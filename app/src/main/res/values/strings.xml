@@ -53,5 +53,7 @@
     <string name="appwidget_text">Stock Hawk</string>
     <string name="add_widget">Add widget</string>
     <string name="valid_stock_error">Enter A Valid Stock Key!</string>
+    <string name="title_widget_stocklist">StockHawk Stocklist</string>
+    <string name="demotestingtext">DemoTestingText</string>
 
 </resources>

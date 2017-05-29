@@ -40,9 +40,9 @@ public class AddStockDialog extends DialogFragment {
         stock.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (stock.getText().toString().length() >5 || stock.getText().toString().length() <2){
+                if (stock.getText().toString().length() >5 || stock.getText().toString().length() <2)
                     stock.setError(getString(R.string.valid_stock_error));
-                }
+
                 addStock();
                 return true;
             }
