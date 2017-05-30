@@ -20,7 +20,8 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/stock_chart"
         android:layout_width="346dp"
-        android:layout_height="202dp" />
+        android:layout_height="202dp"
+        android:background="@color/colorPrimary"/>
 
     <TextView
         android:id="@+id/company_name"

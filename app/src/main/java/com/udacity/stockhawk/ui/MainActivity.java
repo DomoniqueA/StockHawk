@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Intent stockDetailIntent = new Intent(MainActivity.this, DetailActivity.class);
         Uri uriForStockClicked = Contract.Quote.makeUriForStock(symbol);
         stockDetailIntent.setData(uriForStockClicked);
+        stockDetailIntent.putExtra(DetailActivity.EXTRA_SYMBOL, symbol);
         startActivity(stockDetailIntent);
     }
 
