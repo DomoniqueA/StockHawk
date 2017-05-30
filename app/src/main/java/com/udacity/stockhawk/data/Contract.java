@@ -49,6 +49,8 @@ public final class Contract {
             return queryUri.getLastPathSegment();
         }
 
+        //public static
+
 
     }
 

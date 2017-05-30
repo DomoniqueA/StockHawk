@@ -18,44 +18,41 @@
         android:textSize="100sp"
         tools:text="GOOG" />
     <com.github.mikephil.charting.charts.LineChart
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/stock_chart"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_width="346dp"
+        android:layout_height="202dp" />
 
     <TextView
         android:id="@+id/company_name"
         style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
         tools:text="Company Name" />
 
     <TextView
         android:id="@+id/stock_price"
         style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         tools:text="Stock Price"/>
 
     <TextView
         android:id="@+id/absolute_change"
         style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         tools:text="Absolute Change"/>
 
     <TextView
         android:id="@+id/percent_change"
         style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textAlignment="center"
         tools:text="Percent Change"/>
-
-    <TextView
-        android:id="@+id/stock_history"
-        style="@style/TextAppearance.AppCompat.Large"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Stock History"/>
 
 </LinearLayout>

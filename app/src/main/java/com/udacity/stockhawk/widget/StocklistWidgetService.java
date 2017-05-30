@@ -81,7 +81,6 @@ public class StocklistWidgetService extends RemoteViewsService {
             }
         }
 
-        // TODO: 30/05/2017 back to youtube 1:43:19
         @Override
         public void onDataSetChanged() {
 
