@@ -55,5 +55,6 @@
     <string name="valid_stock_error">Enter A Valid Stock Key!</string>
     <string name="title_widget_stocklist">StockHawk Stocklist</string>
     <string name="demotestingtext">DemoTestingText</string>
+    <string name="stock_hawk_widget">Stock Hawk Widget</string>
 
 </resources>

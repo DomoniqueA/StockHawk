@@ -57,9 +57,9 @@
                 android:resource="@xml/stock_list_widget_info" />
         </receiver>
 
-        <!--<service-->
-            <!--android:name=".widget.StocklistWidgetIntentService"-->
-            <!--android:exported="false"/>-->
+        <service
+            android:name=".widget.StocklistWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
     </application>
 
 </manifest>
