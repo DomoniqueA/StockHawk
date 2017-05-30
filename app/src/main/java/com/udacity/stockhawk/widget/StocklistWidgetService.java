@@ -25,6 +25,7 @@ public class StocklistWidgetService extends RemoteViewsService {
 
     private class StockWidgetViewFactory implements RemoteViewsFactory {
 
+        public static final String SET_BACKGROUND_RESOURCE = "setBackgroundResource";
         private final Context mApplicationContext;
         private final DecimalFormat dollarFormatWithPlus;
         private final DecimalFormat dollarFormat;
@@ -112,12 +113,12 @@ public class StocklistWidgetService extends RemoteViewsService {
             if (absChange>0){
                 remoteViews.setInt(
                         R.id.change,
-                        "setBackgroundResource",
+                        SET_BACKGROUND_RESOURCE,
                         R.drawable.percent_change_pill_green);
             } else {
                 remoteViews.setInt(
                         R.id.change,
-                        "setBackgroundResource",
+                        SET_BACKGROUND_RESOURCE,
                         R.drawable.percent_change_pill_red);
             }
 

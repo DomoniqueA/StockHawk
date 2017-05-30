@@ -66,6 +66,9 @@ public class DetailActivity extends AppCompatActivity {
     public static final int INDEX_STOCK_PERCENTAGE_CHANGE = 4;
     public static final int INDEX_STOCK_HISTORY = 5;
     public static final String EXTRA_SYMBOL = "extra:symbol";
+    public static final String LABEL = "label";
+    public static final String LINE_CHART_FOR = "Line Chart for ";
+    public static final String SIMPLE_DATE = "yyyy-MM-dd";
     private static final int ID_DETAIL_LOADER = 221;
     private final DecimalFormat dollarFormatWithPlus;
     private final DecimalFormat dollarFormat;
@@ -134,16 +137,16 @@ public class DetailActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
-        LineData lineData = new LineData(new LineDataSet(entries, "label"));
+        LineData lineData = new LineData(new LineDataSet(entries, LABEL));
         mStockChart.setData(lineData);
-        mStockChart.setContentDescription("Line Chart for " + symbol);
+        mStockChart.setContentDescription(LINE_CHART_FOR + symbol);
 
         XAxis xAxis = mStockChart.getXAxis();
         xAxis.setValueFormatter(new IAxisValueFormatter(){
             @Override
             public String getFormattedValue(float value, AxisBase axisBase) {
                 Date date = new Date(xAxisValues.get(xAxisValues.size() - (int) value - 1));
-                return new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
+                return new SimpleDateFormat(SIMPLE_DATE, Locale.ENGLISH)
                         .format(date);
             }
         });

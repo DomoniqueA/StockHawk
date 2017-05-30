@@ -19,6 +19,11 @@ import yahoofinance.histquotes.HistoricalQuote;
 
 public class MockUtils {
 
+    public static final String STOCK_NAME = "STOCK NAME";
+    public static final String DD_MM_YYYY = "dd/MM/yyyy";
+    public static final String FAILED_TO_PARSE_HIST_DATE = "Failed to parse hist date: ";
+    public static final String N_A = "N/A";
+    public static final String NAN = "nan";
     public static String mockHistory =
             "08/05/2017,68.970001,69.559998,68.040001,68.379997,20913200,68.379997\n" +
                     "01/05/2017,68.68,69.709999,68.489998,69,24889100,69\n" +
@@ -148,7 +153,7 @@ public class MockUtils {
 
     private static HistoricalQuote parseCSVLine(String line) {
         String[] data = line.split(YahooFinance.QUOTES_CSV_DELIMITER);
-        return new HistoricalQuote("STOCK NAME",
+        return new HistoricalQuote(STOCK_NAME,
                 parseHistDate(data[0]),
                 Utils.getBigDecimal(data[1]),
                 Utils.getBigDecimal(data[3]),
@@ -160,7 +165,7 @@ public class MockUtils {
     }
 
     private static Calendar parseHistDate(String date) {
-        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.US);
+        SimpleDateFormat format = new SimpleDateFormat(DD_MM_YYYY, Locale.US);
         try {
             if (isParseable(date)) {
                 Calendar c = Calendar.getInstance();
@@ -168,14 +173,14 @@ public class MockUtils {
                 return c;
             }
         } catch (ParseException ex) {
-            YahooFinance.logger.log(Level.WARNING, "Failed to parse hist date: " + date);
-            YahooFinance.logger.log(Level.FINEST, "Failed to parse hist date: " + date, ex);
+            YahooFinance.logger.log(Level.WARNING, FAILED_TO_PARSE_HIST_DATE + date);
+            YahooFinance.logger.log(Level.FINEST, FAILED_TO_PARSE_HIST_DATE + date, ex);
         }
         return null;
     }
 
     private static boolean isParseable(String data) {
-        return !(data == null || data.equals("N/A") || data.equals("-")
-                || data.equals("") || data.equals("nan"));
+        return !(data == null || data.equals(N_A) || data.equals("-")
+                || data.isEmpty() || data.equals(NAN));
     }
 }

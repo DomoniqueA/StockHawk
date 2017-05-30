@@ -23,6 +23,7 @@ import butterknife.ButterKnife;
 
 public class AddStockDialog extends DialogFragment {
 
+    public static final String INFLATE_PARAMS = "InflateParams";
     @SuppressWarnings("WeakerAccess")
     @BindView(R.id.dialog_stock)
     EditText stock;
@@ -33,14 +34,14 @@ public class AddStockDialog extends DialogFragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
         LayoutInflater inflater = LayoutInflater.from(getActivity());
-        @SuppressLint("InflateParams") View custom = inflater.inflate(R.layout.add_stock_dialog, null);
+        @SuppressLint(INFLATE_PARAMS) View custom = inflater.inflate(R.layout.add_stock_dialog, null);
 
         ButterKnife.bind(this, custom);
 
         stock.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (stock.getText().toString().length() >5 || stock.getText().toString().length() <2)
+                if (stock.getText().toString().length() >5 || stock.getText().toString().length() <=2)
                     stock.setError(getString(R.string.valid_stock_error));
 
                 addStock();

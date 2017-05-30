@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         SwipeRefreshLayout.OnRefreshListener,
         StockAdapter.StockAdapterOnClickHandler {
 
+    public static final String STOCK_DIALOG_FRAGMENT = "StockDialogFragment";
     private static final int STOCK_LOADER = 0;
     @SuppressWarnings("WeakerAccess")
     @BindView(R.id.recycler_view)
@@ -121,7 +122,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     }
 
     public void button(@SuppressWarnings("UnusedParameters") View view) {
-        new AddStockDialog().show(getFragmentManager(), "StockDialogFragment");
+        new AddStockDialog().show(getFragmentManager(), STOCK_DIALOG_FRAGMENT);
     }
 
     void addStock(String symbol) {
